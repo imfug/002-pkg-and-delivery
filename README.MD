@@ -12,11 +12,13 @@ Tracking comments in Google Docs or Word can be tedious as being word processors
  2. Elaborate on it in the issue body.
  3. Back in the document, comment with the issue ID, linking it with the URL.
 
-*NOTE: Any text comments made in the document itself without a [Github issue](https://github.com/imfug/002-pkg-and-delivery/issues) link risk been overlooked.*
+*NOTE: Any text comments made in the document itself without a [Github issue link](https://github.com/imfug/002-pkg-and-delivery/issues) risk been overlooked.*
 
 ## Communication
-All communication to the group as a whole pertaining to the progress herein will be done so via the designated IMF UG reflector: [supplementals@imfug.com](mailto:supplementals@imfug.com).
+All communication to the group as a whole pertaining to the progress herein is done so via the designated IMF UG reflector: [supplementals@imfug.com](mailto:supplementals@imfug.com).
 There will be NO communication to the main reflector unless directed to do so by the UG chair. If you are interested in this work, [subscribe](http://imfug.com/mailman/listinfo/supplementals) to the the [mailing list here](http://imfug.com/mailman/listinfo/supplementals).
+
+Be aware that in order to [suscribe](http://imfug.com/mailman/listinfo/supplementals) to the mailing list, one needs to be a [member](http://www.imfug.com/join) of the User Group. You can apply for membership [here](http://www.imfug.com/join).
 
 To remain up to date on progress; click the 'Watch' button above.
 
@@ -27,11 +29,4 @@ To remain up to date on progress; click the 'Watch' button above.
 
 ## Legal
 
-**Contribution**
-Before contributing, please ensure that you read the [Contributing](https://github.com/imfug/002-pkg-and-delivery/blob/master/CONTRIBUTING.txt) text that accompanies this repository.
-
-**License**
-[License](https://github.com/imfug/002-pkg-and-delivery/blob/master/LICENSE.txt) terms can be observed [here](https://github.com/imfug/002-pkg-and-delivery/blob/master/LICENSE.txt).
-
-___
- HPA User Group | imfug.com  | Copyright (c) 2018 Hollywood Professional Association. All rights reserved.
+Please see LICENSE.txt and CONTRIBUTING.txt before using or contributing to this work.
