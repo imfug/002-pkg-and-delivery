@@ -15,10 +15,10 @@ Tracking comments in Google Docs or Word can be tedious as being word processors
 *NOTE: Any text comments made in the document itself without a [Github issue](https://github.com/imfug/002-pkg-and-delivery/issues) link risk been overlooked.*
 
 ## Communication
-All communication to the group as a whole pertaining to the progress herein will be done so via the designated IMF UG reflector.
-[supplementals@imfug.com](mailto:supplementals@imfug.com).
-There will be no communication to the main reflector unless directed to do so by the UG chair. If you are interested in this work, [subscribe](http://imfug.com/mailman/listinfo/supplementals) to the the [mailing list here](http://imfug.com/mailman/listinfo/supplementals).
-To remain up to date on all progress; click the 'Watch' button above.
+All communication to the group as a whole pertaining to the progress herein will be done so via the designated IMF UG reflector: [supplementals@imfug.com](mailto:supplementals@imfug.com).
+There will be NO communication to the main reflector unless directed to do so by the UG chair. If you are interested in this work, [subscribe](http://imfug.com/mailman/listinfo/supplementals) to the the [mailing list here](http://imfug.com/mailman/listinfo/supplementals).
+
+To remain up to date on progress; click the 'Watch' button above.
 
 ### History
  An initial first draft of the work can be found [here](https://docs.google.com/document/d/1E8-UBbfR2ik6CLypxbRf-RfB934RvflX4OYEN6W404E).
@@ -31,7 +31,7 @@ To remain up to date on all progress; click the 'Watch' button above.
 Before contributing, please ensure that you read the [Contributing](https://github.com/imfug/002-pkg-and-delivery/blob/master/CONTRIBUTING.txt) text that accompanies this repository.
 
 **License**
-[License](https://github.com/imfug/002-pkg-and-delivery/blob/master/LICENSE.txt) terms can be observed [here].(https://github.com/imfug/002-pkg-and-delivery/blob/master/LICENSE.txt)
+[License](https://github.com/imfug/002-pkg-and-delivery/blob/master/LICENSE.txt) terms can be observed [here](https://github.com/imfug/002-pkg-and-delivery/blob/master/LICENSE.txt).
 
 ___
  HPA User Group | imfug.com  | Copyright (c) 2018 Hollywood Professional Association. All rights reserved.
