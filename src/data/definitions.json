@@ -1,0 +1,81 @@
+[
+    {
+        "term": "Branched Assembly",
+        "definition": "Branched assembly is a mastering workflow that uses additional track files, entry points, and durations within the CPL to create a composition that plays back differently when compared to a 'flattened' original version. Often times, the purpose of using this method is to add 'insert' shots (textless titles, replacement shots, localized content) in the middle of an already existing contiguous track file asset - whereas the original track file plays, the insert track file(s), and the original track file resume at the temporal point of the CPL after the duration of the insert (removing the overlapped section of the original track file from playback).\n\nA simplified example for demonstration using a single track file and single branched insert assembly:\n\n- 'Flattened'CPL and playback: Original track file (1-100)\n- 'Branched' CPL and playback: Original track file (1-49) > Insert track file (1-10) > Original track file (60-100)",
+        "anti": true
+
+    },
+    {
+        "term": "Complete Package",
+        "definition": "An IMF Package that references one or more CPL(s) from its Packing List as well as all track files referenced by said CPL(s).",
+        "anti": false
+
+    },
+    {
+        "term": "Component-based Workflows",
+        "definition": "Workflows where the elements of a presentation (audio, video, timed text, etc.) are stored and processed individually, to be assembled just in time to meet the specific needs of each distribution channel.",
+        "anti": false
+
+    },
+    {
+        "term": "Composition",
+        "definition": "A Composition is a concrete technical manifestation of the work, combining metadata and essence files contained and referenced within a single CPL file. Often a Composition will be referred to as a CPL, however, a CPL is only referring to an XML file.\n\nA Composition is not the same as an IMP, as a Composition only describes how the essences are to be combined to a single experience and does not require an ASSETMAP or PKL.",
+        "anti": false
+
+    },
+    {
+        "term": "Consolidation",
+        "definition": "A mastering workflow step where the resources of each virtual track within a Composition are merged, and the underlying assets are transwrapped, such that each Virtual Track of the resulting Composition references a single Resource.",
+        "anti": false
+
+    },
+    {
+        "term": "Consolidated Composition",
+        "definition": "A Composition resulting from Consolidation.",
+        "anti": false
+
+    },
+    {
+        "term": "Flattened Composition",
+        "definition": "A flattened composition is a composition where each virtual track consists of a single resource.",
+        "anti": false
+
+    },
+    {
+        "term": "Full Package",
+        "definition": "Assumes the same meaning as Complete Package.",
+        "anti": false
+
+    },
+    {
+        "term": "Spot Reel",
+        "definition": "Where a short section of a Composition timeline is replaced with a new supplemental asset to resolve a QC error.",
+        "anti": false
+
+    },
+    {
+        "term": "Supplemental Package",
+        "definition": "An IMF Package that references one or more CPL(s) from its Packing List and missing one or more track files referenced by said CPL(s). The Packing List must not reference any track files not referenced from included CPL(s).",
+        "anti": false
+
+    },
+    {
+        "term": "Differential Package",
+        "definition": "Is a synonym of Supplemental Package.",
+        "anti": true
+
+    },
+    {
+        "term": "Original Version",
+        "definition": "When used in IMF, the term Original Version (OV) can result in multiple interpretations. Four (4) of the main interpretations are as follows;\n\n1. An EIDR Level 2 Description that indicates it is the original cut of the content. To be a true original version, it should also have the original spoken language and original subtitles.\n2. A D-Cinema Original Version (i.e the PKL) containing a CPL that plays a composition representing the content as originally created by the talent. This can be referenced by supplemental packages to create additional versions.\n3. An IMF Composition representing the content as originally created by the talent.\n4. An IMP original version (i.e the PKL) containing a CPL that plays a composition representing the content as originally created by the talent. This can be referenced by supplemental packages to create additional versions.\n\nA user should be explicit as to which interpretation represents their intention.",
+        "anti": true
+
+    },
+    {
+        "term": "Transwrap",
+        "definition": "A term used to describe the process of re-wrapping essence from one MXF track file to another without any change occurring to said essence.",
+        "anti": true
+
+    }    
+    
+]
