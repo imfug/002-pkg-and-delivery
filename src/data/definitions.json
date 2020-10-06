@@ -48,12 +48,6 @@
 
     },
     {
-        "term": "Spot Reel",
-        "definition": "Where a short section of a Composition timeline is replaced with a new supplemental asset to resolve a QC error.",
-        "anti": false
-
-    },
-    {
         "term": "Supplemental Package",
         "definition": "An IMF Package that references one or more CPL(s) from its Packing List and missing one or more track files referenced by said CPL(s). The Packing List must not reference any track files not referenced from included CPL(s).",
         "anti": false
