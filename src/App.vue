@@ -1,6 +1,6 @@
 <template>
-  <div class="spacer">
-    <div> 
+  <div>
+    <div class="spacer"> 
       <img alt="UG-Logo" src="./assets/logo.svg" width="300">  
     </div>
     <div> 
