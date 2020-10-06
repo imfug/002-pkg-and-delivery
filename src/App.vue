@@ -1,34 +1,35 @@
 <template>
-  <div>
-    <div>
+  <div class="spacer">
+    <div> 
       <img alt="UG-Logo" src="./assets/logo.svg" width="300">  
     </div>
-    <br/>
     <div> 
-      <h1>{{ title }} <br/>
+      <h1>{{ title }}<br/>
       <small class="text-muted">{{ subtitle }}</small>
       </h1>
       <div>
-      <span class="badge badge-success">Version {{ version }}</span>
-      <span class="badge badge-warning">Status:{{ status }}</span>     
-      <button type="button" class="badge badge-info" @click="createPDF">Download PDF</button></div>    
-      </div>
+        <span class="ug-badge-version">Version {{ version }}</span>
+        <span class="ug-badge-status">Status:{{ status }}</span>     
+        <button type="button" class="ug-button" @click="createPDF"><i class="fa fa-download"></i> Download PDF</button>
+        <a href="https://github.com/imfug/002-pkg-and-delivery"><button type="button" class="ug-button-git"><i class="fa fa-git"></i> Repsoitory</button></a>
+      </div>    
+     </div>
     <section>
       <div v-for="sec in section" v-bind:key="sec">
           <h3>{{ sec.position }}. {{ sec.heading }}</h3>
           <p style="margin: 5px 0px 15px 0px;" v-html="sec.body"></p>
           <div v-for="def in definition" v-bind:key="def">        
             <div v-if="sec.position === 4">
-            <div style="margin: 5px 0px 15px 0px;" v-if="!def.anti">
-                <strong style="color: #0479b8;">{{ def.term }}</strong>
-                <p style="white-space: pre-wrap;margin-top: 10px;">{{ def.definition }}</p>                 
-            </div>
+              <div style="margin: 25px 0px 15px 0px;"  v-if="!def.anti">
+                  <strong style="color: #0479b8;">{{ def.term }}</strong>
+                  <p>{{ def.definition }}</p>                 
+              </div>
             </div>
             <div v-if="sec.position === 5">
-            <div style="margin: 25px 0px 15px 0px;" v-if="def.anti">
-                <strong style="color: #0479b8;">{{ def.term }}</strong>
-                <p style="white-space: pre-wrap;margin-top: 10px;">{{ def.definition }}</p>                 
-            </div>
+              <div style="margin: 25px 0px;" v-if="def.anti">
+                  <strong style="color: #0479b8;">{{ def.term }}</strong>
+                  <p>{{ def.definition }}</p>                 
+              </div>
             </div>          
           </div>
       </div>
@@ -102,12 +103,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: 0 4em;
+  position: absolute;
+  width: 100%;
+  max-width: 667px;
+  white-space: pre-wrap;   
 }
-
-</style>
-<style scoped>
 h1 {
   size: 8pt;
   color: #044c8c;
@@ -120,18 +121,75 @@ h3 {
   margin: 40px 0 0;
   color: #004e8b;  
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
 a {
   color: #2f5496;
 }
 .pre-formatted {
   white-space: pre-wrap;
+}
+.text-muted {
+  color: #6c757d !important;
+}
+.ug-badge-version {
+  background-color: #5cb85c;  
+  color: white;
+  border: 2px solid  #5cb85c;  
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;  
+  margin: 5px; 
+}
+.ug-badge-status {
+  background-color: #f0ad4e; 
+  color: white;
+  border: 2px solid #f0ad4e;  
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 5px; 
+}
+.ug-button {
+  background-color: white;
+  color: black; 
+  border: 2px solid #0479b8;  
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 5px;
+  cursor: pointer;
+}
+.ug-button:hover {
+  transform: scale(1.1);
+}
+.ug-button-git {
+  background-color: black;
+  color: white; 
+  border: 2px solid black;  
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;  
+  margin: 5px;
+  cursor: pointer;
+}
+.ug-button-git:hover {
+  transform: scale(1.1);
+}
+.spacer {
+  padding-top: 15px;
+}
+.term-color {
+  color: #0479b8;
 }
 </style>
