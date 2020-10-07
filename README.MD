@@ -11,17 +11,16 @@ cd 002-pkg-and-delivery
 ## Requirements
 ```
 nodejs
-yarn
 ```
 
 ## Project setup
 ```
-yarn install
+npm install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+npm run serve
 ```
 
 ## Contributing
