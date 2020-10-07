@@ -46,10 +46,11 @@
 import definitions from './data/definitions.json'
 import sections from './data/sections.json'
 import { format_pdf } from './tools/pdf'
-import pdfMake from 'pdfmake'
-import pdfFonts from './js/vfs_fonts.js'
 
+import pdfMake from "pdfmake/build/pdfmake";
+import pdfFonts from "pdfmake/build/vfs_fonts";
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
 
 export default {
   name: 'App',
