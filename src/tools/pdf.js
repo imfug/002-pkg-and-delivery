@@ -25,77 +25,88 @@ function format_pdf(doc){
             margin: [0, 5, 0, 5],
             fontSize: 11
         },
-        content: [],         
+        content: [],
+        styles: {
+            titleStyle: {
+                bold: true,
+                margin: [0, 50, 0, 0],
+                fontSize: 26,
+                color: '#044c8c'  
+            },
+            subtitleStyle: {
+                bold: false,
+                margin: [0, 2, 0, 0],
+                fontSize: 18,
+                color: '#048cd4' 
+            },
+            versionStyle: {
+                bold: false,
+                margin: [0, 2, 0, 0],
+                fontSize: 16,
+                color: '#1d704c'
+            },
+            sectionStyle: {
+                bold: true,
+                margin: [0, 15, 0, 0],
+                fontSize: 14,
+                color: '#004e8b'
+            },            
+            termStyle: {
+                bold: true,
+                margin: [0, 10, 0, 0],
+                fontSize: 13,
+                color: '#0479b8'
+            },
+            defaultStyle: {
+                fontSize: 11, 
+                bold: false,
+                margin: [0, 2, 0, 0]
+            }
+        }                 
     }
     pdf.content.push({
         text: doc.title,
-        bold: true,
-        margin: [0, 50, 0, 0],
-        fontSize: 26,
-        color: '#044c8c'    
+        style: 'titleStyle'  
     })
     pdf.content.push({
         text: doc.subtitle,
-        bold: false,
-        margin: [0, 2, 0, 0],
-        fontSize: 18,
-        color: '#048cd4'        
+        style: 'subtitleStyle'       
     })
     pdf.content.push({
         text: doc.version,
-        bold: false,
-        margin: [0, 2, 0, 0],
-        fontSize: 16,
-        color: '#1d704c'
+        style: 'versionStyle'
     })
     for(var i = 0; i < doc.sections.length; i++) {
         var sec = doc.sections[i];
         pdf.content.push({
             text: sec.position + ". " + sec.heading,
-            bold: true,
-            margin: [0, 15, 0, 0],
-            fontSize: 14,
-            color: '#004e8b'        
+            style: 'sectionStyle'       
         })
         pdf.content.push({
             text: sec.body,
-            bold: false,
-            margin: [0, 12, 0, 5],
-            fontSize: 11        
+            style: 'defaultStyle'
         })
         for(var d = 0; d < doc.definitions.length; d++) {
             var def = doc.definitions[d];
             if (sec.position === 4) {
                 if (!def.anti) {
                     pdf.content.push({
-                        text: def.term,
-                        bold: true,
-                        margin: [0, 10, 0, 0],
-                        fontSize: 13,
-                        color: '#0479b8'
-                    })
-                    pdf.content.push({
-                        text: def.definition,
-                        bold: false,
-                        margin: [0, 2, 0, 0],
-                        fontSize: 11        
+                        stack: [
+                        { text: def.term, style: 'termStyle'},
+                        { text: def.definition, style: 'defaultStyle'}
+                        ],
+                        unbreakable: true
                     })
                 }                
             }
            if (sec.position === 5) {
                 if (def.anti) {
                     pdf.content.push({
-                        text: def.term,
-                        bold: true,
-                        margin: [0, 10, 0, 0],
-                        fontSize: 13,
-                        color: '#0479b8'        
-                    })
-                    pdf.content.push({
-                        text: def.definition,
-                        bold: false,
-                        margin: [0, 2, 0, 0],
-                        fontSize: 11        
+                        stack: [
+                        { text: def.term, style: 'termStyle'},
+                        { text: def.definition, style: 'defaultStyle'}
+                        ],
+                        unbreakable: true
                     })
                 }                 
             }            
