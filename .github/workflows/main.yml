@@ -13,7 +13,6 @@ jobs:
       with:
         node-version: '10'
     - run: npm install
-    - run: npm run lint
     - run: npm run build
     - uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/master'
