@@ -107,7 +107,8 @@ export default {
   position: absolute;
   width: 100%;
   max-width: 667px;
-  white-space: pre-wrap;   
+  white-space: pre-wrap;
+  font-family: Arial, Helvetica, sans-serif;     
 }
 h1 {
   size: 8pt;
