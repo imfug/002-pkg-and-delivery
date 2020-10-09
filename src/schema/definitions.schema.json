@@ -1,0 +1,49 @@
+{
+    "$schema": "http://imfug.com/best-practices/schema/definitions",
+    "$id": "tbc",
+    "$comment": "© 2020 Hollywood Professional Association",
+    "type": "array",
+    "title": "Schema for IMF packaging and delivery term definitions",
+    "additionalItems": false,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "examples": [
+                    {
+                        "term": "",
+                        "definition": ""
+                    }
+                ],
+                "required": [
+                    "term",
+                    "definition",
+                    "anti"
+                ],
+                "properties": {
+                    "term": {
+                        "$id": "#/items/anyOf/0/properties/term",
+                        "type": "string",
+                        "title": "The term schema",
+                        "description": "The term to be defined"
+                    },
+                    "definition": {
+                        "$id": "#/items/anyOf/0/properties/definition",
+                        "type": "string",
+                        "title": "The definition schema",
+                        "description": "The descriptive text explaining the term."
+                    },
+                    "anti": {
+                        "$id": "#/items/anyOf/0/properties/anti",
+                        "type": "boolean",
+                        "title": "The anti-definition flag",
+                        "description": "A boolean flag that indicates if a term is an anti-definition term."
+                    }                    
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}

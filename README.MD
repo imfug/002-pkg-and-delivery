@@ -2,17 +2,33 @@
 
 Best practices for IMF packaging and delivery.
 
-Current working version can be viewed [here](https://docs.google.com/document/d/1g3E-b52SY98tcREANs1Ud-sQsmRbOM-BMYGpV9UgnIQ).
+## Download
+```
+git clone https://github.com/imfug/002-pkg-and-delivery.git
+cd 002-pkg-and-delivery
+```
+
+## Requirements
+```
+nodejs
+```
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
 ## Contributing
-Tracking comments in Google Docs or Word can be tedious as being word processors, they do not offer the relevant functionality.  If you have an issue with something within the document or wish to contribute to it, please adhere to the process outlined as follows;
+If you have an issue with something within the document or wish to contribute to it, please adhere to the process outlined as follows;
 
  1. Create a [new issue](https://github.com/imfug/002-pkg-and-delivery/issues) within this repository clearly stating the
     issue/contribution as succinct as possible in the title.
  2. Elaborate on it in the issue body.
- 3. Back in the document, comment with the issue ID, linking it with the URL.
-
-*NOTE: Any text comments made in the document itself without a [Github issue link](https://github.com/imfug/002-pkg-and-delivery/issues) risk been overlooked.*
 
 ## Communication
 All communication to the group as a whole pertaining to the progress herein is done so via the designated IMF UG reflector: [supplementals@imfug.com](mailto:supplementals@imfug.com).
@@ -25,7 +41,7 @@ To remain up to date on progress; click the 'Watch' button above.
 ### History
  An initial first draft of the work can be found [here](https://docs.google.com/document/d/1E8-UBbfR2ik6CLypxbRf-RfB934RvflX4OYEN6W404E).
 
-*NOTE: This is not a working document. It is included here for reference purposes until the work of this group is deemed complete.* Please see the [current working version](https://docs.google.com/document/d/1g3E-b52SY98tcREANs1Ud-sQsmRbOM-BMYGpV9UgnIQ).
+*NOTE: This is not a working document. It is included here for reference purposes until the work of this group is deemed complete.*
 
 ## Legal
 

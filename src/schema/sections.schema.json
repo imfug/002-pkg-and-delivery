@@ -1,0 +1,59 @@
+{
+    "$schema": "http://imfug.com/best-practices/schema/sections",
+    "$id": "tbc",
+    "$comment": "© 2020 Hollywood Professional Association",
+    "type": "array",
+    "title": "Schema for IMF packaging and delivery sections",
+    "additionalItems": false,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "examples": [
+                    {
+                        "heading": "",
+                        "position": 1,
+                        "body": "",
+                        "valid": true
+                    }
+                ],
+                "required": [
+                    "heading",
+                    "position",
+                    "body",
+                    "valid"
+                ],
+                "properties": {
+                    "heading": {
+                        "$id": "#/items/anyOf/0/properties/heading",
+                        "type": "string",
+                        "title": "The heading schema",
+                        "description": "The section heading"
+                    },
+                    "position": {
+                        "$id": "#/items/anyOf/0/properties/position",
+                        "type": "integer",
+                        "title": "The position schema",
+                        "description": "The position the heading should appear in the document"
+                    },
+                    "body": {
+                        "$id": "#/items/anyOf/0/properties/body",
+                        "type": "string",
+                        "title": "The body schema",
+                        "description": "An explanation about the purpose of this instance."
+                    },
+                    "valid": {
+                        "$id": "#/items/anyOf/0/properties/valid",
+                        "type": "boolean",
+                        "title": "The validity flag",
+                        "description": "To indicate whether the section is valid",
+                        "default": false
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}
