@@ -25,7 +25,7 @@
     },
     {
         "term": "Consolidation",
-        "definition": "A mastering workflow step where the resources of each virtual track within a Composition are merged, and the underlying assets are transwrapped, such that each Virtual Track of the resulting Composition references a single Resource.",
+        "definition": "A mastering workflow step where the resources of each virtual track within a Composition are merged, and the underlying assets are re-wrapped, such that each Virtual Track of the resulting Composition references a single Resource.",
         "anti": false
 
     },
@@ -67,7 +67,7 @@
     },
     {
         "term": "Transwrap",
-        "definition": "A term used to describe the process of re-wrapping essence from one MXF track file to another without any change occurring to said essence.",
+        "definition": "A term used to describe the process of re-wrapping essence from one MXF track file to another without any change occurring to said essence. This term has explicit meaning outside IMF and is therefore discouraged for use within IMF.",
         "anti": true
 
     }    
