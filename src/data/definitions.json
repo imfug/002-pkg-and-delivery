@@ -36,6 +36,12 @@
 
     },
     {
+        "term": "Content Author",
+        "definition": "The person or persons who were responsible for the authorial decisions expressed in the composition, e.g., shot selection, editing, color and sound adjustment, etc. The Content Author may or may not be the rights holder of the composition in any particular context.",
+        "anti": false
+
+    },
+    {
         "term": "Flattened Composition",
         "definition": "A flattened composition is a composition where each virtual track consists of a single resource.",
         "anti": false
@@ -61,7 +67,7 @@
     },
     {
         "term": "Original Version",
-        "definition": "When used in IMF, the term Original Version (OV) can result in multiple interpretations. Four (4) of the main interpretations are as follows;\n\n1. An EIDR Level 2 Description that indicates it is the original cut of the content. To be a true original version, it should also have the original spoken language and original subtitles.\n2. A D-Cinema Original Version (i.e the PKL) containing a CPL that plays a composition representing the content as originally created by the talent. This can be referenced by supplemental packages to create additional versions.\n3. An IMF Composition representing the content as originally created by the talent.\n4. An IMP original version (i.e the PKL) containing a CPL that plays a composition representing the content as originally created by the talent. This can be referenced by supplemental packages to create additional versions.\n\nA user should be explicit as to which interpretation represents their intention.",
+        "definition": "When used in IMF, the term Original Version (OV) can result in multiple interpretations. Four (4) of the main interpretations are as follows;\n\n1. An EIDR Level 2 Description that indicates it is the original cut of the content. To be a true original version, it should also have the original spoken language and original subtitles.\n2. A D-Cinema Original Version (i.e the PKL) containing a CPL that plays a composition representing the content as originally created by the Content Author. This can be referenced by supplemental packages to create additional versions.\n3. An IMF Composition representing the content as originally created by the Content Author.\n4. An IMP original version (i.e the PKL) containing a CPL that plays a composition representing the content as originally created by the Content Author. This can be referenced by supplemental packages to create additional versions.\n\nA user should be explicit as to which interpretation represents their intention.",
         "anti": true
 
     },
