@@ -31,7 +31,7 @@
     },
     {
         "term": "Consolidated Composition",
-        "definition": "A Composition resulting from Consolidation.",
+        "definition": "A Composition resulting from Consolidation. This term is synonymous to flattened composition.",
         "anti": false
 
     },
@@ -43,7 +43,7 @@
     },
     {
         "term": "Flattened Composition",
-        "definition": "A flattened composition is a composition where each virtual track consists of a single resource.",
+        "definition": "A flattened composition is a composition where each virtual track consists of a single resource. This term is synonymous to consolidated composition.",
         "anti": false
 
     },
