@@ -2,8 +2,6 @@
 
 IMFUG 002 Best practices for IMF packaging and delivery.
 
-```
-
 ## Contributing
 If you have an issue with something within the document or wish to contribute to it, please adhere to the process outlined as follows;
 
