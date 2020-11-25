@@ -1,27 +1,6 @@
 # IMF  Best Practices | Packaging & Delivery
 
-Best practices for IMF packaging and delivery.
-
-## Download
-```
-git clone https://github.com/imfug/002-pkg-and-delivery.git
-cd 002-pkg-and-delivery
-```
-
-## Requirements
-```
-nodejs
-```
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+IMFUG 002 Best practices for IMF packaging and delivery.
 
 ## Contributing
 If you have an issue with something within the document or wish to contribute to it, please adhere to the process outlined as follows;
@@ -39,9 +18,8 @@ Be aware that in order to [suscribe](http://imfug.com/mailman/listinfo/supplemen
 To remain up to date on progress; click the 'Watch' button above.
 
 ### History
- An initial first draft of the work can be found [here](https://docs.google.com/document/d/1E8-UBbfR2ik6CLypxbRf-RfB934RvflX4OYEN6W404E).
-
-*NOTE: This is not a working document. It is included here for reference purposes until the work of this group is deemed complete.*
+Initial iteration of this work was published as a webpage. It can be found under the following [deployment](https://imfug.github.io/002-pkg-and-delivery).
+Last commit as a vue.js app can be found [here](https://github.com/imfug/002-pkg-and-delivery/commit/576cd2c3919386e694051464a8c49726c43903d8)
 
 ## Legal
 
