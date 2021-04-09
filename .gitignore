@@ -22,4 +22,5 @@ pnpm-debug.log*
 *.sln
 *.sw?
 *.pdf
+*.tmp
 ~$*.docx
