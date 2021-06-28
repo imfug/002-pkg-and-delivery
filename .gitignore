@@ -22,6 +22,10 @@ pnpm-debug.log*
 *.sln
 *.sw?
 *.pdf
+<<<<<<< HEAD
 *.tmp
 ~$*.docx
 ~$*.pptx
+=======
+~$*.docx
+>>>>>>> cbcf323c0e39103c6062fd26ca6387bc981d54cc
