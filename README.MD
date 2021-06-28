@@ -17,10 +17,6 @@ Be aware that in order to [suscribe](http://imfug.com/mailman/listinfo/supplemen
 
 To remain up to date on progress; click the 'Watch' button above.
 
-### History
-Initial iteration of this work was published as a webpage. It can be found under the following [deployment](https://imfug.github.io/002-pkg-and-delivery).
-Last commit as a vue.js app can be found [here](https://github.com/imfug/002-pkg-and-delivery/commit/576cd2c3919386e694051464a8c49726c43903d8)
-
 ## Legal
 
 Please see LICENSE.txt and CONTRIBUTING.txt before using or contributing to this work.

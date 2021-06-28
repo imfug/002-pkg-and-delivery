@@ -1,22 +1,50 @@
-
-name: build and test
+name: CI
 
 on: [push, pull_request]
-      
-jobs:
-  build:
-    runs-on: ubuntu-latest
 
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository)
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
+    - name: Update apt
+      run: sudo apt-get update
+
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      env:
+        PUPPETEER_PRODUCT: chrome
+      run: |
+        npm install puppeteer
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
       with:
-        node-version: '10'
-    - run: npm install
-    - run: npm run build
-    - uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/master'
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-west-1
+
+    - name: Run CI
+      run: .github/scripts/build.sh
+
+    - name: Deploy
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
-        force_orphan: true
+        publish_dir: ./build
+        
+    - uses: jwalton/gh-find-current-pr@v1
+      if: github.ref != 'refs/heads/main'
+      id: find_current_pr
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+
+    - uses: marocchino/sticky-pull-request-comment@v2
+      if: github.ref != 'refs/heads/main' && steps.finder
+      with:
+        number: ${{ steps.find_current_pr.outputs.pr }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        path: ./build/pr-links.txt
