@@ -26,10 +26,10 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-west-1
 
-    - name: Run CI
+    - name: Render the HTML
       run: .github/scripts/build.sh
 
-    - name: Deploy
+    - name: Deploy to GH pages
       if: github.ref == 'refs/heads/main'
       uses: peaceiris/actions-gh-pages@v3
       with:
