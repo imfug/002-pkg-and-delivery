@@ -2,6 +2,8 @@
 
 IMFUG 002 Best practices for IMF packaging and delivery.
 
+[Current Draft](https://imfug.github.io/002-pkg-and-delivery/)
+
 ## Contributing
 If you have an issue with something within the document or wish to contribute to it, please adhere to the process outlined as follows;
 
@@ -16,10 +18,6 @@ There will be NO communication to the main reflector unless directed to do so by
 Be aware that in order to [suscribe](http://imfug.com/mailman/listinfo/supplementals) to the mailing list, one needs to be a [member](http://www.imfug.com/join) of the User Group. You can apply for membership [here](http://www.imfug.com/join).
 
 To remain up to date on progress; click the 'Watch' button above.
-
-### History
-Initial iteration of this work was published as a webpage. It can be found under the following [deployment](https://imfug.github.io/002-pkg-and-delivery).
-Last commit as a vue.js app can be found [here](https://github.com/imfug/002-pkg-and-delivery/commit/576cd2c3919386e694051464a8c49726c43903d8)
 
 ## Legal
 
