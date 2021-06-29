@@ -1,1 +1,793 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/002-pkg-and-delivery/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><title>imfug-best-practices</title><link href="/002-pkg-and-delivery/css/app.21da7986.css" rel="preload" as="style"><link href="/002-pkg-and-delivery/js/app.146ee7fc.js" rel="preload" as="script"><link href="/002-pkg-and-delivery/js/chunk-vendors.29cfd866.js" rel="preload" as="script"><link href="/002-pkg-and-delivery/css/app.21da7986.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but imfug-best-practices doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div class="container" style="width: 50%;" id="app"></div><script src="/002-pkg-and-delivery/js/chunk-vendors.29cfd866.js"></script><script src="/002-pkg-and-delivery/js/app.146ee7fc.js"></script></body></html>
+<!DOCTYPE html><html><head itemscope="itemscope" itemtype="https://imfug.com/pub">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://static.imfug.com/pub/css/main.css">
+  
+  
+  
+  <title>IMFUG BP 002</title>
+<style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+</style></head>
+
+<body>
+
+    <header class="unnumbered" id="sec-front-matter">
+      <div id="doc-designator" itemtype="http://purl.org/dc/elements/1.1/">
+        <span itemprop="publisher">IMF UG</span> <span id="doc-type">BP</span> <span id="doc-number">002</span>-<span id="doc-part">yyy</span>:<span id="doc-pub-date" itemprop="date">zzzz</span>
+      </div>
+      <div id="long-doc-type">IMF User Group Best Practice</div>
+      <h1>Packaging &amp; Delivery | Supplementals</h1>
+      <div id="doc-status">Draft</div><!-- Draft, Published -->
+      <div id="doc-pubdate">28 June 2021</div><!-- date published in this format-->
+      <div>Issue tracker: <a id="doc-issues" href="https://github.com/imfug/002-pkg-and-delivery/issues" target="_blank"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" alt="Github Logo" width="50"></a></div>
+    </header>
+    
+    <section class="unnumbered" id="sec-scope">
+      <h2>Scope</h2>
+      <p>This best practice defines terms used in IMF workflows alongside providing a lop-level insight into some of the more common present day IMF uses cases.</p>
+    </section>
+
+    <section class="unnumbered" id="sec-sotd">
+        <h2>Status of this document</h2>
+    
+        <!-- do not modify this -->
+    
+        <p>This Best Practice is published by the <a href="https://www.imfug.com">IMF User Group</a>. It may be updated, replaced or
+        obsoleted by other documents at any time. Readers are encouraged to consult and contribute to the <a href="#doc-issues">issue
+        tracker</a>, which lists outstanding issues against the document.</p>
+        <p>©Hollywood Professional Association. Licensed under the <a href="https://creativecommons.org/licenses/by-nd/4.0/">
+        Creative Commons Attribution-NoDerivatives 4.0 International License </a>.</p>
+    </section>
+
+    <section class="unnumbered" id="sec-background">
+        <h2>Background</h2>    
+        <p>The current nomenclature pertinent to the packaging and delivery requirements of the Interoperable Master Format can lead to misinterpretation, confusion and present a number of challenges for service vendors and content owners who facilitate the mastering and version control of Composition Playlist instances and their respective assets. The recommendations outlined in this document are intended to mitigate such confusion and act as an industry reference for the version control and business-to-business interchange of IMF packages and delivery of their contained and/or newly created Composition Playlist instances.</p>
+    </section>
+    
+    <section class="sec-section-1" id="sec-terms" data-number="1">
+        <h2><span class="element-num">1. </span>Definitions</h2>    
+        <p>Below are some of the most commonly used terms and agreed upon definitions currently in use. There may be slight variances for day-to-day usage, but this list is provided to reduce confusion across multiple varying workflow creators and users.</p>
+
+        <dl>
+            <dt id="d-term-1">Complete Package</dt>
+            <dd>An IMF Package that references one or more CPL(s) from its Packing List as well as all track files referenced by said CPL(s).</dd>
+      
+            <dt id="d-term-2">Component-based Wrokflows</dt>
+            <dd>Workflows where the elements of a presentation (audio, video, timed text, etc.) are stored and processed individually, to be assembled just in time to meet the specific needs of each distribution channel.</dd>
+
+            <dt id="d-term-3">Composition</dt>
+            <dd>A Composition is a concrete technical manifestation of the work, combining metadata and essence files contained and referenced within a single CPL file. Often a Composition will be referred to as a CPL, however, a CPL is only referring to an XML file.<br><br>A Composition is not the same as an IMP, as a Composition only describes how the essences are to be combined to a single experience and does not require an ASSETMAP or PKL.</dd>
+        
+            <dt id="d-term-4">Consolidated Composition</dt>
+            <dd>A mastering workflow step where the resources of each virtual track within a Composition are merged, and the underlying assets are re-wrapped, such that each Virtual Track of the resulting Composition references a single Resource.</dd>
+
+            <dt id="d-term-5">Consolidated Composition</dt>
+            <dd>A Composition resulting from Consolidation. This term is synonymous to flattened composition.</dd>
+
+            <dt id="d-term-6">Content Author</dt>
+            <dd>The person or persons who were responsible for the authorial decisions expressed in the composition, e.g., shot selection, editing, color and sound adjustment, etc. The Content Author may or may not be the rights holder of the composition in any particular context.</dd>
+
+            <dt id="d-term-7">Flattened Package</dt>
+            <dd>A flattened composition is a composition where each virtual track consists of a single resource. This term is synonymous to consolidated composition.</dd>
+
+            <dt id="d-term-8">Full Package</dt>
+            <dd>Assumes the same meaning as Complete Package.</dd>
+
+            <dt id="d-term-9">Manufcturing</dt>
+            <dd>Manufacturing as a term describes the activity of building a Composition which may include track file creation and/or repurposing.</dd>
+
+            <dt id="d-term-10">Supplemental Package</dt>
+            <dd>An IMF Package that references one or more CPL(s) from its Packing List and missing one or more track files referenced by said CPL(s). The Packing List must not reference any track files not referenced from included CPL(s).</dd>
+
+        </dl>
+
+    </section>
+    
+    <section class="sec-section-2" id="sec-terms" data-number="2">
+        <h2><span class="element-num">2. </span>Anti-Definitions</h2>    
+        <p>The following are definitions of existing terms in use by the industry that should not be adopted by IMF users e.g., the use of certain Digital Cinema terms, such as Original Version (OV). These terms have multiple interpretations depending upon the context and business entity and, as such, do not necessarily fit well within the IMF ecosystem.</p>
+
+        <dl>
+            <dt id="ad-term-1">Branched Assembly</dt>
+            <dd>Branched assembly is a mastering workflow that uses additional track files, entry points, and durations within the CPL to create a composition that plays back differently when compared to a 'flattened' original version. Often, the purpose of using this method is to add 'insert' shots (textless titles, replacement shots, localized content) in the middle of an already existing contiguous track file asset - whereas the original track file plays, the insert track file(s), and the original track file resume at the temporal point of the CPL after the duration of the insert (removing the overlapped section of the original track file from playback).<br><br>
+
+            A simplified example for demonstration using a single-track file and single branched insert assembly:
+
+                    <ol>
+                        <li>'Flattened' CPL and playback: Original track file (1-100)</li>
+                        <li>'Branched' CPL and playback: Original track file (1-49) &gt; Insert track file (1-10) &gt; Original track file (60-100)</li>
+                    </ol>
+
+            A user should be explicit as to which interpretation represents their intention.
+            </dd>
+
+            <dt id="ad-term-2">Differential Package</dt>
+            <dd>Is a synonym of Supplemental Package.</dd>
+            
+            <dt id="ad-term-3">Mastering</dt>
+            <dd>Assumes the same meaning as Manufacturing.</dd>
+
+            <dt id="ad-term-4">Original Version</dt>
+            <dd>When used in IMF, the term Original Version (OV) can result in multiple interpretations. Four (4) of the main interpretations are as follows.<br>
+
+                    <ol>
+                        <li>An EIDR Level 2 Description that indicates it is the original cut of the content. To be a true original version, it should also have the original spoken language and original subtitles.</li>
+                        <li>A D-Cinema Original Version (i.e., the PKL) containing a CPL that plays a composition representing the content as originally created by the Content Author. This can be referenced by supplemental packages to create additional versions.</li>
+                        <li>An IMF Composition representing the content as originally created by the Content Author.</li>
+                        <li>An IMP original version (i.e., the PKL) containing a CPL that plays a composition representing the content as originally created by the Content Author. This can be referenced by supplemental packages to create additional versions.</li>
+                    </ol>
+
+            A user should be explicit as to which interpretation represents their intention.</dd>
+      
+            <dt id="ad-term-5">Transwrap</dt>
+            <dd>A term used to describe the process of re-wrapping essence from one MXF track file to another without any change occurring to said essence. This term has explicit meaning outside IMF and is therefore discouraged for use within IMF.</dd>
+
+          </dl>
+
+    </section>
+    
+    <section class="sec-section-3" id="sec-uc" data-number="3">
+        <h2><span class="element-num">3. </span>Use Cases</h2>
+
+        <section class="sec-section-3-1" id="sec-uc-intro" data-number="3.1">
+            <h3><span class="element-num">3.1. </span>Introduction</h3>  
+            <p>The following sections documents common uses cases surrounding the exchange and/or delivery of IMF Packages. Such exchange is based on human, user driven processes.</p>
+
+            <p class="note" id="sec-3-1-note-1" data-number="1"><span class="element-num">NOTE 1: </span>IMF can be machine driven through the use of Application Programming Interfaces  (APIs) and Media Asset Management Systems  (MAMS). Recommendations for such an implementation is out of scope for this document.</p>
+        </section>
+
+        <section class="sec-section-3-2" id="sec-uc-hsar" data-number="3.2">
+            <h3><span class="element-num">3.2. </span>Handling Supplemental Files at Rest versus through an API</h3>  
+            <p>Packing List and Asset Map files exist to facilitate asset transfer between systems using store-and-forward methodologies such as filesystems on physical media, and file transfer schemes such as FTP or basic file transfer via HTTP. While effective, this form of inter-system transfer can be very inefficient in cases where the assembled package contains more assets than the receiver needs or when additional resources are engaged to construct the minimal (most efficient) package for a particular use case. The entire subject of supplemental packages is a useful introduction to the many issues that may arise when attempting to package material for efficient distribution.</p>
+
+            <p>In the alternative, transfer between systems can be performed using an API to allow the receiver to indicate those assets to be transferred. This approach is more easily made efficient since there are no Packing List or Asset Map files to be created or interpreted. The sender can transmit, e.g., a CPL to the recipient, and the recipient can then compare the CPL Resource identifiers to its local database to create a list of items that are not locally available, and which must be requested from the sender. The recipient can then supplement its inventory with the requested items to complete the composition in the local system.</p>
+        </section>
+
+        <section class="sec-section-3-3" id="sec-uc-cplr" data-number="3.3">
+            <h3><span class="element-num">3.3. </span>CPL Revisions</h3> 
+
+            <section class="sec-section-3-3-1" id="sec-uc-cr-intro">
+                <p>There are a number of situations that may require a CPL to be revised. This section defines what parameters are allowed to be edited/changed by an operator and those which are dependent on referenced resources and should be populated by the system used to assemble the CPL file.</p>
+            </section>            
+
+            <section class="sec-section-3-3-2" id="sec-uc-cr-md" data-number="3.3.1">
+                <h4><span class="element-num">3.3.1. </span>CPL Metadata Changes</h4>  
+                <p>A CPL has a number of descriptive metadata fields that are not derived from underlying essence files. As such, these fields are prone to human error which can lead to a revision being necessary. In order to avoid editing structural metadata derived from referenced essence, a table is provided for reference in Section 6.3.2, Table 1 - User Editable Metadata Fields. This table depicts the fields that are permitted to be directly edited by a user after or during the creation of a CPL file.</p>
+                
+                <p class="note" id="sec-3-3-2-note-2" data-number="2"><span class="element-num">NOTE 2: </span>It is required that for changes made to a CPL, a new document instance is created. It is also required that the new document instance has a new random value for the Id property, and that the IssueDate and Creator properties are also updated.</p>
+
+                <table id="table-1" data-number="1">
+                    <caption><span class="element-num">Table 1. </span>User Editable Metadata Fields</caption>
+                    <thead>
+                      <tr>
+                        <th>Element Name</th>
+                        <th>Attribute</th>
+                        <th>Type</th>
+                        <th>Parent Element</th>
+                        <th>Issue</th>                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Content Title</td>
+                        <td>No</td>
+                        <td>string</td>
+                        <td>CompositionPlaylist</td>
+                        <td>Unable to properly identify the title of the content.</td>
+                      </tr>
+                      <tr>
+                        <td>Issuer</td>
+                        <td>No</td>
+                        <td>string</td>
+                        <td>CompositionPlaylist</td>
+                        <td>Unable to properly identify issuing identity.</td>
+                      </tr>
+                      <tr>
+                        <td>ContentOriginator</td>
+                        <td>No</td>
+                        <td>string</td>
+                        <td>CompositionPlaylist</td>
+                        <td>Unable to properly identify the origin of the content.</td>
+                      </tr>
+                      <tr>
+                        <td>ContentKind</td>
+                        <td>No</td>
+                        <td>string</td>
+                        <td>CompositionPlaylist</td>
+                        <td>Unable to correctly categorize the content.</td>
+                      </tr>
+                      <tr>
+                        <td>Annotation</td>
+                        <td>No</td>
+                        <td>string</td>
+                        <td>CompositionPlaylist</td>
+                        <td>Incorrect description of the composition.</td>
+                      </tr> 
+                      <tr>
+                        <td>Id</td>
+                        <td>No</td>
+                        <td>string</td>
+                        <td>ContentVersion</td>
+                        <td>Unable to properly identify the content of the composition.</td>
+                      </tr>
+                      <tr>
+                        <td>LabelText</td>
+                        <td>No</td>
+                        <td>string</td>
+                        <td>ContentVersion</td>
+                        <td>Inaccurate description of the content.</td>
+                      </tr>
+                      <tr>
+                        <td>Annotation</td>
+                        <td>No</td>
+                        <td>string</td>
+                        <td>Locale</td>
+                        <td>Incorrect description of the locale.</td>
+                      </tr>
+                      <tr>
+                        <td>Language*</td>
+                        <td>No</td>
+                        <td>subtag</td>
+                        <td>LanguageList</td>
+                        <td>Incorrect language for the target locale. Could impact rights management.</td>
+                      </tr>
+                      <tr>
+                        <td>Region</td>
+                        <td>No</td>
+                        <td>M49Code</td>
+                        <td>RegionList</td>
+                        <td>Incorrect locale identifier. Could impact rights management.</td>
+                      </tr>
+                      <tr>
+                        <td>Agency</td>
+                        <td>No</td>
+                        <td>anyURI</td>
+                        <td>ContentMaturityList</td>
+                        <td>Incorrect value allows access to an unintended audience.</td>
+                      </tr> 
+                      <tr>
+                        <td>Rating</td>
+                        <td>No</td>
+                        <td>string</td>
+                        <td>ContentMaturityList</td>
+                        <td>Incorrect value allows access to an unintended audience.</td>
+                      </tr> 
+                      <tr>
+                        <td>Audience</td>
+                        <td>No</td>
+                        <td>string</td>
+                        <td>ContentMaturityList</td>
+                        <td>Incorrect value allows access to an unintended audience.</td>
+                      </tr>
+                      <tr>
+                        <td>Audience</td>
+                        <td>No</td>
+                        <td>string</td>
+                        <td>ContentMaturityList</td>
+                        <td>Incorrect value allows access to an unintended audience.</td>
+                      </tr>
+                      <tr>
+                        <td>Scope</td>
+                        <td>Yes</td>
+                        <td>anyURI</td>
+                        <td>Audience</td>
+                        <td>Incorrect value allows access to an unintended audience.</td>
+                      </tr>  
+                      <tr>
+                        <td>Annotation</td>
+                        <td>No</td>
+                        <td>string</td>
+                        <td>Resource</td>
+                        <td>Incorrect description of the resource.</td>
+                      </tr> 
+                      <tr>
+                        <td>EntryPoint</td>
+                        <td>No</td>
+                        <td>int</td>
+                        <td>Resource</td>
+                        <td>Unintended content representation.</td>
+                      </tr> 
+                      <tr>
+                        <td>SourceDuration</td>
+                        <td>No</td>
+                        <td>int</td>
+                        <td>Resource</td>
+                        <td>Unintended content representation.</td>
+                      </tr> 
+                      <tr>
+                        <td>RepeatCount</td>
+                        <td>No</td>
+                        <td>int</td>
+                        <td>Resource</td>
+                        <td>Unintended content representation.</td>
+                      </tr>      
+                    </tbody>
+                  </table>
+
+                <p class="note" id="sec-3-3-2-note-2" data-number="3"><span class="element-num">NOTE 3: </span>*A language tag is embedded in the MXF metadata of sound track files, identifying the spoken dialogue of the underlying sound essence. Given that the language tag is embedded in the MXF metadata, if it set incorrectly then updating/changing the language tag requires re-wrapping of all sound essence included in the associated track file.</p>
+
+                <p>Update Steps</p>
+                <ol>
+                    <li>Check for changes to the resource reference of each virtual track structure in each composition segment. If there are changes, see <a href="#sec-uc-cr-tt">Section 3.3.2</a>.</li>
+                    <li>Verify constraints for updated fields.</li>
+                    <li>Construct and write out a new CPL document.</li>
+                </ol>
+            </section>
+
+            <section class="sec-section-3-3-3" id="sec-uc-cr-tt" data-number="3.3.2">
+                <h4><span class="element-num">3.3.2. </span>Timeline Trimming</h4>  
+                <p>There are titles, which due to distribution requirements will need certain playable regions omitted in subsequent versions, whereby their compositions are delivered as a supplemental package. Cases include but are not limited to the following.</p>
+                    <ol>
+                        <li>Removal of distribution branding from the start and/or end of a composition.</li>
+                        <li>Removal of certain scenes e.g., due to licensing requirements.</li>
+                        <li>Editorial changes e.g., due to censorship.</li>
+                    </ol>
+                <p>This supplemental package only contains a Composition Playlist, a Packing List and an Assetmap. There should be no MXF track files included.</p>
+
+                <figure class="figure" id="fig-1" data-number="1">
+                    <img loading="timeline trimming" src="diagrams\figure-1_timeline_trimming.png">
+                    <figcaption><span class="element-num">Figure 1. </span>CPL Timeline Trimming example showcases the unchanged state of the referenced MXF track files, but rather the amended duration values of the Sequence resulting in a shorter playable region.</figcaption>
+                </figure>
+
+            </section>
+
+        </section>
+
+        <section class="sec-section-3-4" id="sec-uc-cplmxf" data-number="3.4">
+            <h3><span class="element-num">3.4. </span>CPL MXF Reference Changes</h3>  
+            <p>There can be many reasons why MXF references need to be updated or changed. The following subsections cover the common use cases where MXF track file references are changed and the manner in which one should package the updated files.</p>
+        
+            <section class="sec-section-3-4-1" id="sec-uc-cplmxf" data-number="3.4.1">
+                <h4><span class="element-num">3.4.1. </span>MCA LAnguage Tag</h4>  
+                <p>A language tag is embedded in the MXF metadata of sound track files, identifying the spoken dialogue of the underlying sound essence. Given that the language tag is embedded in the MXF metadata, updating/changing the language tag requires re-wrapping of all sound essence included in the associated track file.</p>
+                
+                <p>The resulting sound track file(s) can be referenced from new Composition Playlists (CPL). The updated sound track file(s) and CPL(s) can be packaged in a new complete package with the original picture track files, or as a supplemental package that only contains the new Composition Playlist, a Packing List, Assetmap and the newly created sound track files.</p>
+
+                <p class="note" id="sec-3-4-1-note-1" data-number="4"><span class="element-num">NOTE 4: </span>IMFUG BP 004 MCA Best Practices provides some guidance on how to choose MCA properties.</p>
+
+                <figure class="figure" id="fig-2" data-number="2">
+                    <img loading="mca lang tag" src="diagrams\figure-2_MCA_lang_tag.png">
+                    <figcaption><span class="element-num">Figure 2. </span>MCA Language Tag depicts an excerpt of a Composition Playlist’s Audio Essence Descriptor XML structure. The highlighted RFC5646SpokenLangauge value is an XML representation of the metadata contained in the respective MXF track file. To manually change this value will break the Tag relationship between the CPL and the referenced MXF track file.</figcaption>
+                </figure>
+
+            </section>
+
+            <section class="sec-section-3-4-2" id="sec-uc-cplmxf-ps" data-number="3.4.2">
+                <h4><span class="element-num">3.4.2. </span>Picture &amp; Sound Fixes</h4>  
+                <p>It is not uncommon for issues to be detected in essence during the Quality Control (QC) process after delivery. Such issues can be a sound track replacement, picture inserts due to poor quality or aesthetic revisions. Such fixes are ideally delivered as a supplemental package that contains a newly created Composition Playlist, a Packing List, Assetmap and a number of picture or sound MXF track files acting as inserts.</p>
+                
+                <p class="note" id="sec-3-4-2-note-1" data-number="5"><span class="element-num">NOTE 5: </span>The newly created Composition Playlist can still reference existing track files outside the package that have been delivered previously.</p>
+
+                <figure class="figure" id="fig-3" data-number="3">
+                    <img loading="picture and sound fixes" src="diagrams\figure-3_picture_and_sound_fixes.png">
+                    <figcaption><span class="element-num">Figure 3. </span>Picture and Sound fixes depicts the follow up delivery of newly created Picture and Audio fixes as individual MXF track files. They are packaged in a Supplemental Package also containing a new CPL referencing the previously delivery MXF track files in the Original Language Version (delivered as a complete package) and the newly created MXF track files.</figcaption>
+                </figure>
+            </section>
+
+            <section class="sec-section-3-4-3" id="sec-uc-cplmxf-pv" data-number="3.4.3">
+                <h4><span class="element-num">3.4.3. </span>Picture Versioning</h4>  
+                <p>In order to satisfy local versioning requirements, picture sections that depict language-specific narrative items such as on-screen text and narrative titles are localized resulting in alternative picture versions for these sections. These ‘sections’ act as picture inserts and are used to replace the original language version instances.</p>
+                
+                <p>These picture inserts can be delivered in a supplemental package that contains a newly created Composition Playlist, a Packing List, Assetmap and the newly created picture inserts.</p>
+                
+                <p>This same practice can be applied to the manufacturing of Textless Compositions.</p>
+            </section>
+
+            <section class="sec-section-3-4-4" id="sec-uc-cplmxf-sl" data-number="3.4.4">
+                <h4><span class="element-num">3.4.4. </span>Sound Localization</h4>  
+                <p>For dubbed instances of an Original Language Version, it is recommended that supplemental packages are used to deliver said dubbed content versions.</p>
+            </section>
+        
+        </section>
+
+
+    </section>      
+
+    <section class="sec-section-4" id="sec-intro" data-number="4">
+        <h2><span class="element-num">4. </span>Recommended CPL Elements</h2>    
+        <p>The following list outlines the optional elements permitted by ST 2067-3 which are recommended to be included in all CPL XML documents.</p>
+
+        <section class="sec-section-4-1" id="sec-hash" data-number="4.1">
+            <h3><span class="element-num">4.1. </span>Hash Element</h3>
+            <p>The <code>hash</code> Element should be present for all referenced track file resources.</p>
+        </section>
+
+        <section class="sec-section-4-1" id="sec-marker" data-number="4.2">
+            <h3><span class="element-num">4.2. </span>Markers</h3>
+            <p>IMF provides a vocabulary to describe time positions in a composition through the use of Markers. The same terminology used to describe Markers as defined in ST 2067-3 should be used when discussing relative positions in a composition timeline in an informal context.</p>
+        </section>
+
+    </section>      
+
+
+
+</body></html>
