@@ -2,7 +2,7 @@
 
 BUILD_DIR=build
 SPEC_DIR=spec
-MAIN_BRANCH=master
+MAIN_BRANCH=main
 SPEC_FILENAME=spec.html
 RENDERED_SPEC_FILENAME=index.html
 STAGING_S3_BUCKET=s3://staging-pub-imf-ug/drafts
