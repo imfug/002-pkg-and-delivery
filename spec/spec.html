@@ -328,11 +328,11 @@
                         <li>Removal of certain scenes e.g., due to licensing requirements.</li>
                         <li>Editorial changes e.g., due to censorship.</li>
                     </ol>
-                <p>This supplemental package only contains a Composition Playlist, a Packing List and an Assetmap. There should be no MXF track files included.</p>
+                <p>This supplemental package only contains a Composition Playlist, a Packing List and an Assetmap. There should be no MXF track files included. <a href="#fig-1">Figure 1</a> - "CPL Timeline Trimming Example" showcases the unchanged state of the referenced MXF track files, but rather the amended duration values of the Sequence resulting in a shorter playable region.</p>
 
                 <figure class="figure" id="fig-1">
                     <img loading="timeline trimming" src="diagrams\figure-1_timeline_trimming.png" />
-                    <figcaption>CPL Timeline Trimming example showcases the unchanged state of the referenced MXF track files, but rather the amended duration values of the Sequence resulting in a shorter playable region.</figcaption>
+                    <figcaption>CPL Timeline Trimming Example</figcaption>
                 </figure>
 
             </section>
@@ -349,25 +349,30 @@
                 
                 <p>The resulting sound track file(s) can be referenced from new Composition Playlists (CPL). The updated sound track file(s) and CPL(s) can be packaged in a new complete package with the original picture track files, or as a supplemental package that only contains the new Composition Playlist, a Packing List, Assetmap and the newly created sound track files.</p>
 
-                <p class="note" id="sec-3-4-1-note-1">IMFUG BP 004 MCA Best Practices provides some guidance on how to choose MCA properties.</p>
+                <p><a href="#fig-2">Figure 2</a>- "MCA Language Tag" depicts an excerpt of a Composition Playlist’s Audio Essence Descriptor XML structure. The highlighted RFC5646SpokenLangauge value is an XML representation of the metadata contained in the respective MXF track file. To manually change this value will break the Tag relationship between the CPL and the referenced MXF track file.</p>
 
                 <figure class="figure" id="fig-2">
                     <img loading="mca lang tag" src="diagrams\figure-2_MCA_lang_tag.png" />
-                    <figcaption>MCA Language Tag depicts an excerpt of a Composition Playlist’s Audio Essence Descriptor XML structure. The highlighted RFC5646SpokenLangauge value is an XML representation of the metadata contained in the respective MXF track file. To manually change this value will break the Tag relationship between the CPL and the referenced MXF track file.</figcaption>
+                    <figcaption>MCA Language Tag</figcaption>
                 </figure>
+
+                <p class="note" id="sec-3-4-1-note-1">IMFUG BP 004 MCA Best Practices provides some guidance on how to choose MCA properties.</p>
 
             </section>
 
             <section class="sec-section-3-4-2" id="sec-uc-cplmxf-ps">
                 <h4>Picture & Sound Fixes</h4>  
                 <p>It is not uncommon for issues to be detected in essence during the Quality Control (QC) process after delivery. Such issues can be a sound track replacement, picture inserts due to poor quality or aesthetic revisions. Such fixes are ideally delivered as a supplemental package that contains a newly created Composition Playlist, a Packing List, Assetmap and a number of picture or sound MXF track files acting as inserts.</p>
-                
-                <p class="note" id="sec-3-4-2-note-1">The newly created Composition Playlist can still reference existing track files outside the package that have been delivered previously.</p>
+
+                <p><a href="#fig-3">Figure 3</a> - depicts the follow up delivery of newly created Picture and Audio fixes as individual MXF track files. They are packaged in a Supplemental Package also containing a new CPL referencing the previously delivery MXF track files in the Original Language Version (delivered as a complete package) and the newly created MXF track files.</p>
 
                 <figure class="figure" id="fig-3">
                     <img loading="picture and sound fixes" src="diagrams\figure-3_picture_and_sound_fixes.png" />
-                    <figcaption>Picture and Sound fixes depicts the follow up delivery of newly created Picture and Audio fixes as individual MXF track files. They are packaged in a Supplemental Package also containing a new CPL referencing the previously delivery MXF track files in the Original Language Version (delivered as a complete package) and the newly created MXF track files.</figcaption>
+                    <figcaption>Picture and Sound Fixes</figcaption>
                 </figure>
+
+                <p class="note" id="sec-3-4-2-note-1">The newly created Composition Playlist can still reference existing track files outside the package that have been delivered previously.</p>
+                
             </section>
 
             <section class="sec-section-3-4-3" id="sec-uc-cplmxf-pv">
