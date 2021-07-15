@@ -27,7 +27,7 @@
     
     <section class="unnumbered" id='sec-scope'>
       <h2>Scope</h2>
-      <p>This best practice defines terms used in IMF workflows alongside providing a lop-level insight into some of the more common present day IMF uses cases.</p>
+      <p>This best practice defines terms used in IMF workflows alongside providing a top-level insight into some of the more common present day IMF uses cases.</p>
     </section>
 
     <section class="unnumbered" id="sec-sotd">
@@ -61,17 +61,17 @@
             <dt id="d-term-3">Composition</dt>
             <dd>A Composition is a concrete technical manifestation of the work, combining metadata and essence files contained and referenced within a single CPL file. Often a Composition will be referred to as a CPL, however, a CPL is only referring to an XML file.<br><br>A Composition is not the same as an IMP, as a Composition only describes how the essences are to be combined to a single experience and does not require an ASSETMAP or PKL.</dd>
         
-            <dt id="d-term-4">Consolidated Composition</dt>
+            <dt id="d-term-4">Consolidation/dt>
             <dd>A mastering workflow step where the resources of each virtual track within a Composition are merged, and the underlying assets are re-wrapped, such that each Virtual Track of the resulting Composition references a single Resource.</dd>
 
             <dt id="d-term-5">Consolidated Composition</dt>
-            <dd>A Composition resulting from Consolidation. This term is synonymous to flattened composition.</dd>
+            <dd>A Composition resulting from Consolidation. This term is synonymous to Flattened Composition.</dd>
 
             <dt id="d-term-6">Content Author</dt>
             <dd>The person or persons who were responsible for the authorial decisions expressed in the composition, e.g., shot selection, editing, color and sound adjustment, etc. The Content Author may or may not be the rights holder of the composition in any particular context.</dd>
 
-            <dt id="d-term-7">Flattened Package</dt>
-            <dd>A flattened composition is a composition where each virtual track consists of a single resource. This term is synonymous to consolidated composition.</dd>
+            <dt id="d-term-7">Flattened Composition</dt>
+            <dd>A flattened composition is a composition where each virtual track consists of a single resource. This term is synonymous to Consolidated Composition.</dd>
 
             <dt id="d-term-8">Full Package</dt>
             <dd>Assumes the same meaning as Complete Package.</dd>
@@ -106,11 +106,14 @@
 
             <dt id="ad-term-2">Differential Package</dt>
             <dd>Is a synonym of Supplemental Package.</dd>
+
+            <dt id="ad-term-3">Flattened Package</dt>
+            <dd>This term is synonymous to Flattened Composition.</dd>            
             
-            <dt id="ad-term-3">Mastering</dt>
+            <dt id="ad-term-4">Mastering</dt>
             <dd>Assumes the same meaning as Manufacturing.</dd>
 
-            <dt id="ad-term-4">Original Version</dt>
+            <dt id="ad-term-5">Original Version</dt>
             <dd>When used in IMF, the term Original Version (OV) can result in multiple interpretations. Four (4) of the main interpretations are as follows.<br>
 
                     <ol>
@@ -122,7 +125,7 @@
 
             A user should be explicit as to which interpretation represents their intention.</dd>
       
-            <dt id="ad-term-5">Transwrap</dt>
+            <dt id="ad-term-6">Transwrap</dt>
             <dd>A term used to describe the process of re-wrapping essence from one MXF track file to another without any change occurring to said essence. This term has explicit meaning outside IMF and is therefore discouraged for use within IMF.</dd>
 
           </dl>
@@ -155,7 +158,7 @@
 
             <section class="sec-section-3-3-2" id="sec-uc-cr-md">
                 <h4>CPL Metadata Changes</h4>  
-                <p>A CPL has a number of descriptive metadata fields that are not derived from underlying essence files. As such, these fields are prone to human error which can lead to a revision being necessary. In order to avoid editing structural metadata derived from referenced essence, a table is provided for reference in Section 6.3.2, Table 1 - User Editable Metadata Fields. This table depicts the fields that are permitted to be directly edited by a user after or during the creation of a CPL file.</p>
+                <p>A CPL has a number of descriptive metadata fields that are not derived from underlying essence files. As such, these fields are prone to human error which can lead to a revision being necessary. In order to avoid editing structural metadata derived from referenced essence, <a href="#table-1" >Table 1</a>- "User Editable Metadata Fields" is provided for reference. This table depicts the fields that are permitted to be directly edited by a user after or during the creation of a CPL file.</p>
                 
                 <p class="note" id="sec-3-3-2-note-2">It is required that for changes made to a CPL, a new document instance is created. It is also required that the new document instance has a new random value for the Id property, and that the IssueDate and Creator properties are also updated.</p>
 
@@ -325,11 +328,11 @@
                         <li>Removal of certain scenes e.g., due to licensing requirements.</li>
                         <li>Editorial changes e.g., due to censorship.</li>
                     </ol>
-                <p>This supplemental package only contains a Composition Playlist, a Packing List and an Assetmap. There should be no MXF track files included.</p>
+                <p>This supplemental package only contains a Composition Playlist, a Packing List and an Assetmap. There should be no MXF track files included. <a href="#fig-1">Figure 1</a> - "CPL Timeline Trimming Example" showcases the unchanged state of the referenced MXF track files, but rather the amended duration values of the Sequence resulting in a shorter playable region.</p>
 
                 <figure class="figure" id="fig-1">
                     <img loading="timeline trimming" src="diagrams\figure-1_timeline_trimming.png" />
-                    <figcaption>CPL Timeline Trimming example showcases the unchanged state of the referenced MXF track files, but rather the amended duration values of the Sequence resulting in a shorter playable region.</figcaption>
+                    <figcaption>CPL Timeline Trimming Example</figcaption>
                 </figure>
 
             </section>
@@ -341,30 +344,35 @@
             <p>There can be many reasons why MXF references need to be updated or changed. The following subsections cover the common use cases where MXF track file references are changed and the manner in which one should package the updated files.</p>
         
             <section class="sec-section-3-4-1" id="sec-uc-cplmxf">
-                <h4>MCA LAnguage Tag</h4>  
+                <h4>MCA Language Tag</h4>  
                 <p>A language tag is embedded in the MXF metadata of sound track files, identifying the spoken dialogue of the underlying sound essence. Given that the language tag is embedded in the MXF metadata, updating/changing the language tag requires re-wrapping of all sound essence included in the associated track file.</p>
                 
                 <p>The resulting sound track file(s) can be referenced from new Composition Playlists (CPL). The updated sound track file(s) and CPL(s) can be packaged in a new complete package with the original picture track files, or as a supplemental package that only contains the new Composition Playlist, a Packing List, Assetmap and the newly created sound track files.</p>
 
-                <p class="note" id="sec-3-4-1-note-1">IMFUG BP 004 MCA Best Practices provides some guidance on how to choose MCA properties.</p>
+                <p><a href="#fig-2">Figure 2</a>- "MCA Language Tag" depicts an excerpt of a Composition Playlist’s Audio Essence Descriptor XML structure. The highlighted RFC5646SpokenLangauge value is an XML representation of the metadata contained in the respective MXF track file. To manually change this value will break the Tag relationship between the CPL and the referenced MXF track file.</p>
 
                 <figure class="figure" id="fig-2">
                     <img loading="mca lang tag" src="diagrams\figure-2_MCA_lang_tag.png" />
-                    <figcaption>MCA Language Tag depicts an excerpt of a Composition Playlist’s Audio Essence Descriptor XML structure. The highlighted RFC5646SpokenLangauge value is an XML representation of the metadata contained in the respective MXF track file. To manually change this value will break the Tag relationship between the CPL and the referenced MXF track file.</figcaption>
+                    <figcaption>MCA Language Tag</figcaption>
                 </figure>
+
+                <p class="note" id="sec-3-4-1-note-1">IMFUG BP 004 MCA Best Practices provides some guidance on how to choose MCA properties.</p>
 
             </section>
 
             <section class="sec-section-3-4-2" id="sec-uc-cplmxf-ps">
                 <h4>Picture & Sound Fixes</h4>  
                 <p>It is not uncommon for issues to be detected in essence during the Quality Control (QC) process after delivery. Such issues can be a sound track replacement, picture inserts due to poor quality or aesthetic revisions. Such fixes are ideally delivered as a supplemental package that contains a newly created Composition Playlist, a Packing List, Assetmap and a number of picture or sound MXF track files acting as inserts.</p>
-                
-                <p class="note" id="sec-3-4-2-note-1">The newly created Composition Playlist can still reference existing track files outside the package that have been delivered previously.</p>
+
+                <p><a href="#fig-3">Figure 3</a> - depicts the follow up delivery of newly created Picture and Audio fixes as individual MXF track files. They are packaged in a Supplemental Package also containing a new CPL referencing the previously delivery MXF track files in the Original Language Version (delivered as a complete package) and the newly created MXF track files.</p>
 
                 <figure class="figure" id="fig-3">
                     <img loading="picture and sound fixes" src="diagrams\figure-3_picture_and_sound_fixes.png" />
-                    <figcaption>Picture and Sound fixes depicts the follow up delivery of newly created Picture and Audio fixes as individual MXF track files. They are packaged in a Supplemental Package also containing a new CPL referencing the previously delivery MXF track files in the Original Language Version (delivered as a complete package) and the newly created MXF track files.</figcaption>
+                    <figcaption>Picture and Sound Fixes</figcaption>
                 </figure>
+
+                <p class="note" id="sec-3-4-2-note-1">The newly created Composition Playlist can still reference existing track files outside the package that have been delivered previously.</p>
+                
             </section>
 
             <section class="sec-section-3-4-3" id="sec-uc-cplmxf-pv">
@@ -386,16 +394,16 @@
 
     </section>      
 
-    <section class="sec-section-4" id="sec-intro">
+    <section class="sec-section-4" id="sec-4-intro">
         <h2>Recommended CPL Elements</h2>    
         <p>The following list outlines the optional elements permitted by ST 2067-3 which are recommended to be included in all CPL XML documents.</p>
 
-        <section class="sec-section-4-1" id="sec-hash">
+        <section class="sec-section-4-1" id="sec-4-hash">
             <h3>Hash Element</h3>
             <p>The <code>hash</code> Element should be present for all referenced track file resources.</p>
         </section>
 
-        <section class="sec-section-4-1" id="sec-marker">
+        <section class="sec-section-4-1" id="sec-4-marker">
             <h3>Markers</h3>
             <p>IMF provides a vocabulary to describe time positions in a composition through the use of Markers. The same terminology used to describe Markers as defined in ST 2067-3 should be used when discussing relative positions in a composition timeline in an informal context.</p>
         </section>
