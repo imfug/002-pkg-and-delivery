@@ -12,6 +12,8 @@ jobs:
 
     - name: Checkout repo
       uses: actions/checkout@v2
+      with:
+        fetchdepth: 0
 
     - name: Install dependencies
       env:
