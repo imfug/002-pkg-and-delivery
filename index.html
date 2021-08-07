@@ -3,6 +3,9 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://static.imfug.com/pub/css/main.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://static.imfug.com/pub/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://static.imfug.com/pub/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://static.imfug.com/pub/favicon/favicon-16x16.png">
   
   
   
@@ -401,14 +404,26 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 <body>
 
     <header class="unnumbered" id="sec-front-matter">
-      <div id="doc-designator" itemtype="http://purl.org/dc/elements/1.1/">
-        <span itemprop="publisher">IMF UG</span> <span id="doc-type">BP</span> <span id="doc-number">002</span>-<span id="doc-part">yyy</span>:<span id="doc-pub-date" itemprop="date">zzzz</span>
-      </div>
-      <div id="long-doc-type">IMF User Group Best Practice</div>
-      <h1>Packaging &amp; Delivery | Supplementals</h1>
-      <div id="doc-status">Draft</div><!-- Draft, Published -->
-      <div id="doc-pubdate">28 June 2021</div><!-- date published in this format-->
-      <div>Issue tracker: <a id="doc-issues" href="https://github.com/imfug/002-pkg-and-delivery/issues" target="_blank"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" alt="Github Logo" width="50"></a></div>
+      <table data-number="1">
+        <tbody><tr>
+          <td colspan="2" id="doc-designator" itemtype="http://purl.org/dc/elements/1.1/">
+            <span itemprop="publisher">IMF UG</span> <span id="doc-type">BP</span> <span id="doc-number">002</span>
+          </td>
+        </tr>
+        <tr>
+          <td id="header-logo">
+            <img src="https://static.imfug.com/pub/img/hpa-logo.png">
+          </td>
+          <td id="header-title">
+    
+            <div id="long-doc-type">IMF User Group Best Practice</div>
+            <h1>Packaging &amp; Delivery | Supplementals</h1>
+            <div><span id="doc-status">Published</span><!-- Draft, Published --> <time id="doc-pubdate" datetime="2021-08-05">2021-08-05</time><!-- date published in this format--></div>
+            <div>Issue tracking: <a id="doc-issues" href="https://github.com/imfug/002-pkg-and-delivery/issues">https://github.com/imfug/002-pkg-and-delivery/issues</a>
+            </div>
+          </td>
+        </tr><tr>
+        </tr></tbody></table>
     </header>
     
     <section class="unnumbered" id="sec-scope">
@@ -424,7 +439,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
         <p>This Best Practice is published by the <a href="https://www.imfug.com">IMF User Group</a>. It may be updated, replaced or
         obsoleted by other documents at any time. Readers are encouraged to consult and contribute to the <a href="#doc-issues">issue
         tracker</a>, which lists outstanding issues against the document.</p>
-        <p>©Hollywood Professional Association. Licensed under the <a href="https://creativecommons.org/licenses/by-nd/4.0/">
+        <p id="copyright-notice">©Hollywood Professional Association. Licensed under the <a href="https://creativecommons.org/licenses/by-nd/4.0/">
         Creative Commons Attribution-NoDerivatives 4.0 International License </a>.</p>
     </section>
 
@@ -447,8 +462,8 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
             <dt id="d-term-3">Composition</dt>
             <dd>A Composition is a concrete technical manifestation of the work, combining metadata and essence files contained and referenced within a single CPL file. Often a Composition will be referred to as a CPL, however, a CPL is only referring to an XML file.<br><br>A Composition is not the same as an IMP, as a Composition only describes how the essences are to be combined to a single experience and does not require an ASSETMAP or PKL.</dd>
         
-            <dt id="d-term-4">Consolidation/dt&gt;
-            </dt><dd>A mastering workflow step where the resources of each virtual track within a Composition are merged, and the underlying assets are re-wrapped, such that each Virtual Track of the resulting Composition references a single Resource.</dd>
+            <dt id="d-term-4">Consolidation</dt>
+            <dd>A mastering workflow step where the resources of each virtual track within a Composition are merged, and the underlying assets are re-wrapped, such that each Virtual Track of the resulting Composition references a single Resource.</dd>
 
             <dt id="d-term-5">Consolidated Composition</dt>
             <dd>A Composition resulting from Consolidation. This term is synonymous to Flattened Composition.</dd>
