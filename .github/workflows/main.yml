@@ -12,6 +12,8 @@ jobs:
 
     - name: Checkout repo
       uses: actions/checkout@v2
+      with:
+        fetch-depth: "0"
 
     - name: Install dependencies
       env:
@@ -43,7 +45,7 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
 
     - uses: marocchino/sticky-pull-request-comment@v2
-      if: github.ref != 'refs/heads/main' && steps.finder
+      if: github.ref != 'refs/heads/main' && steps.find_current_pr
       with:
         number: ${{ steps.find_current_pr.outputs.pr }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
