@@ -15,7 +15,7 @@ If you have an issue with something within the document or wish to contribute to
 All communication to the group as a whole pertaining to the progress herein is done so via the designated IMF UG reflector: [supplementals@imfug.com](mailto:supplementals@imfug.com).
 There will be NO communication to the main reflector unless directed to do so by the UG chair. If you are interested in this work, [subscribe](http://imfug.com/mailman/listinfo/supplementals) to the the [mailing list here](http://imfug.com/mailman/listinfo/supplementals).
 
-Be aware that in order to [suscribe](http://imfug.com/mailman/listinfo/supplementals) to the mailing list, one needs to be a [member](http://www.imfug.com/join) of the User Group. You can apply for membership [here](http://www.imfug.com/join).
+Be aware that in order to [subscribe](http://imfug.com/mailman/listinfo/supplementals) to the mailing list, one needs to be a [member](http://www.imfug.com/join) of the User Group. You can apply for membership [here](http://www.imfug.com/join).
 
 To remain up to date on progress; click the 'Watch' button above.
 
